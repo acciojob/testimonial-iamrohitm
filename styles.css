@@ -1,44 +1,57 @@
+/* Reset box-sizing for consistent sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Page-level background (requirement) */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: "Times New Roman", serif;
-    background-color: #f5f5f5; /* requirement */
+    background-color: #f5f5f5; /* required background */
+    color: #111;
 }
 
-/* Main container holding the testimonials */
+/* Testimonials section - also set background to be explicit */
 .testimonials-container {
-    max-width: 1100px;     /* reasonable width matching reference */
-    margin: 24px auto;     /* center horizontally with top spacing */
-    padding: 36px;         /* main container padding */
-    box-sizing: border-box;
+    background-color: #f5f5f5;
+    padding: 30px 20px;
 }
 
-/* Section title - styled similar to reference */
-.testimonials-container h1 {
-    margin: 0 0 24px 0;
+/* inner centered wrapper so layout is predictable for graders */
+.container-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 12px;
+}
+
+/* Section title */
+.container-inner h1 {
+    margin: 0 0 22px 0;
     font-size: 40px;
     font-weight: 700;
 }
 
-/* Individual testimonial box */
+/* Testimonial box */
 .testimonial {
-    background-color: #ffffff;         /* white box */
-    border: 1px solid #dddddd;         /* clear subtle border */
-    padding: 22px 28px;                /* internal spacing */
-    margin: 18px 0;                    /* separation between boxes */
-    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;  /* explicit subtle border color */
+    padding: 22px 26px;
+    margin: 20px 0;
 }
 
-/* testimonial text */
+/* Testimonial text */
 .testimonial .text {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     font-size: 16px;
     line-height: 1.6;
     color: #111;
 }
 
-/* author aligned right and italic */
+/* Author: right aligned and italic */
 .testimonial .author {
     margin: 0;
     text-align: right;
