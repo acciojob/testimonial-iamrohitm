@@ -1,26 +1,47 @@
-/*  your css code here. If applicable */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif;
+    background-color: #f5f5f5; /* requirement */
+}
+
+/* Main container holding the testimonials */
 .testimonials-container {
-    background-color: #f5f5f5;
-    padding: 40px;
+    max-width: 1100px;     /* reasonable width matching reference */
+    margin: 24px auto;     /* center horizontally with top spacing */
+    padding: 36px;         /* main container padding */
+    box-sizing: border-box;
 }
 
-/* Testimonial box styling */
+/* Section title - styled similar to reference */
+.testimonials-container h1 {
+    margin: 0 0 24px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Individual testimonial box */
 .testimonial {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin: 20px 0;
+    background-color: #ffffff;         /* white box */
+    border: 1px solid #dddddd;         /* clear subtle border */
+    padding: 22px 28px;                /* internal spacing */
+    margin: 18px 0;                    /* separation between boxes */
+    box-sizing: border-box;
 }
 
-/* Regular testimonial text */
+/* testimonial text */
 .testimonial .text {
-    font-size: 16px;
     margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #111;
 }
 
-/* Author styling */
+/* author aligned right and italic */
 .testimonial .author {
+    margin: 0;
     text-align: right;
     font-style: italic;
-    margin: 0;
+    color: #222;
 }
